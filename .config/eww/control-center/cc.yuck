@@ -14,8 +14,8 @@
 (defwindow control-center
   :monitor 0
   :geometry (geometry
-    :x "0.5%"
-    :y "0.8%"
+    :x "0.3%"
+    :y "0.6%"
   :anchor "top right")
   :stacking "fg"
   :windowtype "dock"

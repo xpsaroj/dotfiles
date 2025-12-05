@@ -21,10 +21,12 @@ window#waybar {
     color: #ffffff;
     font-size: 14px;
     padding: 0 14px;
-    margin: 0 20px 0 2px;
+    margin: 0;
     transition: background 0.2s ease;
-    border: 1px solid rgba(26, 230, 204, 1);
-    border-radius: 6px;
+    border-style: solid;
+    border-width: 3px;
+    border-image: linear-gradient(to bottom right, #00FFCC, #0099FF) 1;
+    border-radius: 0;
 }
 
 #custom-launcher:hover {
@@ -35,13 +37,15 @@ window#waybar {
 #window {
     background: rgba(18, 22, 26, 0.7);
     font-size: 16px;
-    margin: 0;
+    margin: 0 0 0 20px;
     padding: 0 14px;
     transition: background 0.2s ease;
     color: #ffffff;
-    border: 1px solid rgba(26, 230, 204, 1);
+    border-style: solid;
+    border-width: 3px;
+    border-image: linear-gradient(to bottom right, #00FFCC, #0099FF) 1;
     border-right: none;
-    border-radius: 6px 0 0 6px;
+    border-radius: 0;
 }
 
 #window:hover {
@@ -74,13 +78,15 @@ window#waybar {
     margin: 0;
     padding: 0;
     padding-right: 4px;
-    border: 1px solid rgba(26, 230, 204, 1);
+    border-style: solid;
+    border-width: 3px;
+    border-image: linear-gradient(to bottom right, #00FFCC, #0099FF) 1;
     border-left: none;
-    border-radius: 0 6px 6px 0;
+    border-radius: 0;
 }
 
 #workspaces button {
-    padding: 0 5px;
+    padding: 0 4px;
     margin: 4px;
     border-radius: 4px;
     color: rgba(255, 255, 255, 0.7);
@@ -111,10 +117,12 @@ window#waybar {
 /* Center Section - Music (MPRIS) */
 #mpris {
     background: rgba(18, 22, 26, 0.7);
-    border-radius: 6px;
+    border-radius: 0;
     margin: 0;
     padding: 0 12px;
-    border: 1px solid rgba(26, 230, 204, 1);
+    border-style: solid;
+    border-width: 3px;
+    border-image: linear-gradient(to bottom right, #00FFCC, #0099FF) 1;
     color: #ffffff;
     font-weight: 400;
     transition: background 0.2s ease;
@@ -132,10 +140,12 @@ window#waybar {
 /* Right-Section - Combined Block */
 #clock {
     background: rgba(18, 22, 26, 0.7);
-    border-radius: 6px 0 0 6px;
+    border-radius: 0;
     margin: 0;
     padding: 0 4px 0 10px;
-    border: 1px solid rgba(26, 230, 204, 1);
+    border-style: solid;
+    border-width: 3px;
+    border-image: linear-gradient(to bottom right, #00FFCC, #0099FF) 1;
     border-right: none;
     color: #ffffff;
     transition: background 0.2s ease;
@@ -144,6 +154,7 @@ window#waybar {
 }
 
 #battery,
+#idle_inhibitor,
 #network,
 #pulseaudio,
 #backlight,
@@ -152,7 +163,9 @@ window#waybar {
     border-radius: 0;
     margin: 0;
     padding: 0 4px;
-    border: 1px solid rgba(26, 230, 204, 1);
+    border-style: solid;
+    border-width: 3px;
+    border-image: linear-gradient(to bottom right, #00FFCC, #0099FF) 1;
     border-right: none;
     border-left: none;
     color: #ffffff;
@@ -161,10 +174,12 @@ window#waybar {
 
 #custom-user {
     background: rgba(18, 22, 26, 0.7);
-    border-radius: 0 6px 6px 0;
+    border-radius: 0;
     margin: 0;
     padding: 0 10px 0 30px;
-    border: 1px solid rgba(26, 230, 204, 1);
+    border-style: solid;
+    border-width: 3px;
+    border-image: linear-gradient(to bottom right, #00FFCC, #0099FF) 1;
     border-left: none;
     color: #ffffff;
     transition: background 0.2s ease;
@@ -176,7 +191,15 @@ window#waybar {
     background-clip: padding-box;
 }
 
-/* Individual module styling */
+#idle_inhibitor.activated {
+    color: #90EE90;
+    font-weight: 600;
+}
+
+#idle_inhibitor.deactivated {
+    color: rgba(255, 255, 255, 0.6);
+}
+
 #battery {
     font-size: 13px;
     color: #90EE90;
@@ -221,6 +244,7 @@ window#waybar {
 }
 
 /* Hover effects for the combined block */
+#idle_inhibitor:hover,
 #clock:hover,
 #battery:hover,
 #network:hover,
@@ -245,8 +269,10 @@ tooltip {
     font-family: "JetBrains Mono Nerd Font", "Noto Sans", sans-serif;
     font-size: 12px;
     padding: 6px 10px;
-    border-radius: 4px;
+    border-radius: 0;
     background: rgba(20, 20, 20, 0.95);
-    border: 1px solid rgba(26, 230, 204, 1);
+    border-style: solid;
+    border-width: 3px;
+    border-image: linear-gradient(to bottom right, #00FFCC, #0099FF) 1;
     color: #ffffff;
 }

@@ -1,0 +1,54 @@
+;; Date Widget Configuration
+
+;; Variables to store date information
+(defvar day-name "")
+(defvar date-number "")
+(defvar month-year "")
+
+;; Poll for date updates every minute
+(defpoll current-day :interval "60s" 
+  :initial "$(date +'%A')"
+  "date +'%A'")
+
+(defpoll current-date :interval "60s"
+  :initial "$(date +'%d')" 
+  "date +'%d'")
+
+(defpoll current-month-year :interval "60s"
+  :initial "$(date +'%B %Y')"
+  "date +'%B %Y'")
+
+;; Date widget component
+(defwidget date-display []
+  (box :class "wallpaper-date-container"
+       :orientation "v"
+       :space-evenly false
+       :valign "start"
+       :halign "center"
+    (label :class "wallpaper-day-name"
+           :text current-day
+           :halign "center")
+    (box :class "wallpaper-date-info"
+         :orientation "v"
+         :spacing 2
+         :halign "center"
+      (label :class "wallpaper-date-number"
+             :text current-date
+             :halign "center")
+      (label :class "wallpaper-month-year"
+             :text current-month-year
+             :halign "center"))))
+
+;; Window definition
+(defwindow date-widget
+  :monitor 0
+  :geometry (geometry :x "50%"
+                     :y "80px"
+                     :width "300px"
+                     :height "150px"
+                     :anchor "top center")
+  :stacking "overlay"
+  :exclusive false
+  :focusable false
+  :wm-ignore true
+  (date-display))

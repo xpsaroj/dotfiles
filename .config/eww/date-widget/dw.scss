@@ -1,0 +1,64 @@
+/* Date Widget Styles - GTK CSS Compatible */
+
+.wallpaper-date-container {
+  background: transparent;
+  padding: 20px 30px;
+  margin: 0;
+}
+
+.wallpaper-day-name {
+  font-size: 48px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 15px;
+  font-family: "SF Pro Display", "Segoe UI", "Ubuntu", sans-serif;
+  letter-spacing: 3px;
+}
+
+.wallpaper-date-info {
+  margin-top: 10px;
+}
+
+.wallpaper-date-number {
+  font-size: 72px;
+  font-weight: 100;
+  color: rgba(255, 255, 255, 1.0);
+  margin: 0px;
+  font-family: "SF Pro Display", "Segoe UI", "Ubuntu", sans-serif;
+  letter-spacing: 1px;
+}
+
+.wallpaper-month-year {
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 5px;
+  font-family: "SF Pro Display", "Segoe UI", "Ubuntu", sans-serif;
+  letter-spacing: 1px;
+}
+
+/* Subtle animation effects */
+.wallpaper-day-name {
+  transition: color 0.3s ease;
+}
+
+.wallpaper-date-number {
+  transition: color 0.3s ease;
+}
+
+.wallpaper-month-year {
+  transition: color 0.3s ease;
+}
+
+/* Hover effects for interactivity */
+.wallpaper-date-container:hover .wallpaper-day-name {
+  color: rgba(255, 255, 255, 1.0);
+}
+
+.wallpaper-date-container:hover .wallpaper-date-number {
+  color: rgba(255, 200, 150, 1.0);
+}
+
+.wallpaper-date-container:hover .wallpaper-month-year {
+  color: rgba(255, 255, 255, 0.9);
+}

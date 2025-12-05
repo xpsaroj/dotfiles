@@ -16,8 +16,8 @@
                     "trailing_diamond": "\ue0b0"
                 },
                 {
-                    "foreground": "#282a36",
-                    "background": "#50fa7b",
+                    "foreground": "#44475a",
+                    "background": "#00FFCC",
                     "style": "powerline",
                     "powerline_symbol": "\ue0b0",
                     "template": " {{ .UserName }} ",
@@ -40,8 +40,8 @@
                     "type": "root"
                 },
                 {
-                    "foreground": "#282a36",
-                    "background": "#50fa7b",
+                    "foreground": "#44475a",
+                    "background": "#00FFCC",
                     "powerline_symbol": "\ue0b0",
                     "properties": {
                         "folder_separator_icon": "/",
@@ -78,7 +78,7 @@
                     "type": "text"
                 },
                 {
-                    "foreground": "#50fa7b",
+                    "foreground": "#00FFCC",
                     "foreground_templates": [
                         "{{ if gt .Code 0 }}#ff5555{{ end }}"
                     ],

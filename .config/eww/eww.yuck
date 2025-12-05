@@ -3,3 +3,6 @@
 
 ;; Power menu
 (include "./power-menu/pm.yuck")
+
+;; Date and time
+(include "./date-widget/dw.yuck")
