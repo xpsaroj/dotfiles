@@ -4,7 +4,7 @@
     font-size: 13px;
     font-weight: 500;
     border: none;
-    border-radius: 0;
+
     margin: 0;
     padding: 0;
 }
@@ -23,10 +23,8 @@ window#waybar {
     padding: 0 14px;
     margin: 0;
     transition: background 0.2s ease;
-    border-style: solid;
-    border-width: 3px;
-    border-image: linear-gradient(to bottom right, #00FFCC, #0099FF) 1;
-    border-radius: 0;
+    border: 2px solid rgb(102, 107, 110);
+    border-radius: 4px;
 }
 
 #custom-launcher:hover {
@@ -41,11 +39,9 @@ window#waybar {
     padding: 0 14px;
     transition: background 0.2s ease;
     color: #ffffff;
-    border-style: solid;
-    border-width: 3px;
-    border-image: linear-gradient(to bottom right, #00FFCC, #0099FF) 1;
+    border: 2px solid rgb(102, 107, 110);
     border-right: none;
-    border-radius: 0;
+    border-radius: 4px 0 0 4px;
 }
 
 #window:hover {
@@ -78,11 +74,9 @@ window#waybar {
     margin: 0;
     padding: 0;
     padding-right: 4px;
-    border-style: solid;
-    border-width: 3px;
-    border-image: linear-gradient(to bottom right, #00FFCC, #0099FF) 1;
+    border: 2px solid rgb(102, 107, 110);
     border-left: none;
-    border-radius: 0;
+    border-radius: 0 4px 4px 0;
 }
 
 #workspaces button {
@@ -117,15 +111,15 @@ window#waybar {
 /* Center Section - Music (MPRIS) */
 #mpris {
     background: rgba(18, 22, 26, 0.7);
-    border-radius: 0;
+
     margin: 0;
     padding: 0 12px;
-    border-style: solid;
-    border-width: 3px;
-    border-image: linear-gradient(to bottom right, #00FFCC, #0099FF) 1;
+    border: 2px solid rgb(102, 107, 110);
+
     color: #ffffff;
     font-weight: 400;
     transition: background 0.2s ease;
+    border-radius: 4px;
 }
 
 #mpris:hover {
@@ -140,12 +134,11 @@ window#waybar {
 /* Right-Section - Combined Block */
 #clock {
     background: rgba(18, 22, 26, 0.7);
-    border-radius: 0;
+
     margin: 0;
     padding: 0 4px 0 10px;
-    border-style: solid;
-    border-width: 3px;
-    border-image: linear-gradient(to bottom right, #00FFCC, #0099FF) 1;
+    border: 2px solid rgb(102, 107, 110);
+    border-radius: 4px 0 0 4px;
     border-right: none;
     color: #ffffff;
     transition: background 0.2s ease;
@@ -160,12 +153,10 @@ window#waybar {
 #backlight,
 #tray {
     background: rgba(18, 22, 26, 0.7);
-    border-radius: 0;
+
     margin: 0;
     padding: 0 4px;
-    border-style: solid;
-    border-width: 3px;
-    border-image: linear-gradient(to bottom right, #00FFCC, #0099FF) 1;
+    border: 2px solid rgb(102, 107, 110);
     border-right: none;
     border-left: none;
     color: #ffffff;
@@ -174,17 +165,17 @@ window#waybar {
 
 #custom-user {
     background: rgba(18, 22, 26, 0.7);
-    border-radius: 0;
+
     margin: 0;
     padding: 0 10px 0 30px;
-    border-style: solid;
-    border-width: 3px;
-    border-image: linear-gradient(to bottom right, #00FFCC, #0099FF) 1;
+    border: 2px solid rgb(102, 107, 110);
+    border-radius: 0 4px 4px 0;
+
     border-left: none;
     color: #ffffff;
     transition: background 0.2s ease;
     font-weight: 500;
-    background-image: url("file:///home/saroj/.config/waybar/assets/avatar.png");
+    background-image: url("file:///home/sp/.config/waybar/assets/avatar.png");
     background-repeat: no-repeat;
     background-position: 4px center;
     background-size: 21px 21px;
@@ -257,7 +248,7 @@ window#waybar {
 /* Hover effect for the user module */
 #custom-user:hover {
     background: rgba(50, 50, 50, 0.9);
-    background-image: url("file:///home/saroj/.config/waybar/assets/avatar.png");
+    background-image: url("file:///home/sp/.config/waybar/assets/avatar.png");
     background-repeat: no-repeat;
     background-position: 6px center;
     background-size: 20px 20px;
@@ -269,10 +260,9 @@ tooltip {
     font-family: "JetBrains Mono Nerd Font", "Noto Sans", sans-serif;
     font-size: 12px;
     padding: 6px 10px;
-    border-radius: 0;
+
     background: rgba(20, 20, 20, 0.95);
-    border-style: solid;
-    border-width: 3px;
-    border-image: linear-gradient(to bottom right, #00FFCC, #0099FF) 1;
+    border: 2px solid rgb(102, 107, 110);
+
     color: #ffffff;
 }

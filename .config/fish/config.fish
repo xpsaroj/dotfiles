@@ -38,4 +38,4 @@ if status is-interactive
 end
 
 # Created by `pipx` on 2025-11-16 15:02:01
-set PATH $PATH /home/saroj/.local/bin
+set PATH $PATH /home/sp/.local/bin
