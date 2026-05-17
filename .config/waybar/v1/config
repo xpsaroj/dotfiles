@@ -5,9 +5,9 @@
         "output": "eDP-1",
         "height": 40,
         "spacing": 0,
-        "margin-top": 0,
-        "margin-left": 0,
-        "margin-right": 0,
+        "margin-top": 4,
+        "margin-left": 4,
+        "margin-right": 5,
         "modules-left": [
             "custom/launcher",
             "hyprland/window",
@@ -27,7 +27,7 @@
             "custom/user"
         ],
         "custom/launcher": {
-            "format": "",
+            "format": "󰀻",
             "tooltip": false,
             "on-click": "rofi -show drun"
         },
@@ -45,13 +45,8 @@
                 "google-chrome": "",
                 "org.qbittorrent.qBittorrent": "󰁙",
                 "org.gnome.nautilus": "󰉓",
-                "org.gnome.Loupe": "",
-                "org.gnome.Snapshot": "",
-                "org.gnome.Builder": "",
                 "vlc": "󰕼",
                 "steam": "",
-                "blueman-manager": "",
-                "org.pulseaudio.pavucontrol": "",
                 "": "."
             },
             "on-click": "pkill waybar"
@@ -105,8 +100,8 @@
         "idle_inhibitor": {
             "format": "{icon}",
             "format-icons": {
-                "activated": "  ",
-                "deactivated": "  "
+                "activated": "   ",
+                "deactivated": "   "
             },
             "tooltip": true,
             "tooltip-format-activated": "Idle Inhibitor: Active (Idle Blocked)",
@@ -164,13 +159,13 @@
         },
         "mpris": {
             "format": "{player_icon} {dynamic}",
-            "format-paused": "{status_icon} {dynamic}",
+            "format-paused": "{status_icon}",
             "player-icons": {
                 "default": "▶",
                 "mpv": "🎵"
             },
             "status-icons": {
-                "paused": "󰏤"
+                "paused": "⏸"
             },
             "max-length": 45,
             "on-click": "playerctl play-pause",
@@ -211,9 +206,9 @@
         "output": "HDMI-A-1",
         "height": 40,
         "spacing": 0,
-        "margin-top": 0,
-        "margin-left": 0,
-        "margin-right": 0,
+        "margin-top": 4,
+        "margin-left": 5,
+        "margin-right": 5,
         "modules-left": [
             "custom/launcher",
             "hyprland/window",
@@ -233,7 +228,7 @@
             "custom/user"
         ],
         "custom/launcher": {
-            "format": "",
+            "format": "󰀻",
             "tooltip": false,
             "on-click": "rofi -show drun"
         },
@@ -251,13 +246,8 @@
                 "google-chrome": "",
                 "org.qbittorrent.qBittorrent": "󰁙",
                 "org.gnome.nautilus": "󰉓",
-                "org.gnome.Loupe": "",
-                "org.gnome.Snapshot": "",
-                "org.gnome.Builder": "",
                 "vlc": "󰕼",
                 "steam": "",
-                "blueman-manager": "",
-                "org.pulseaudio.pavucontrol": "",
                 "": "."
             },
             "on-click": "pkill waybar"
@@ -311,8 +301,8 @@
         "idle_inhibitor": {
             "format": "{icon}",
             "format-icons": {
-                "activated": "  ",
-                "deactivated": "  "
+                "activated": "   ",
+                "deactivated": "   "
             },
             "tooltip": true,
             "tooltip-format-activated": "Idle Inhibitor: Active (Idle Blocked)",
@@ -370,13 +360,13 @@
         },
         "mpris": {
             "format": "{player_icon} {dynamic}",
-            "format-paused": "{status_icon} {dynamic}",
+            "format-paused": "{status_icon}",
             "player-icons": {
                 "default": "▶",
                 "mpv": "🎵"
             },
             "status-icons": {
-                "paused": "󰏤"
+                "paused": "⏸"
             },
             "max-length": 45,
             "on-click": "playerctl play-pause",

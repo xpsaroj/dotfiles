@@ -1,6 +1,7 @@
 /* Global Styles */
 * {
-    font-family: "FantasqueSansM Nerd Font Mono", "Noto Sans", monospace;
+    font-family: "JetBrains Mono Nerd Font", "Noto Sans", monospace;
+    font-size: 13px;
     font-weight: 500;
     border: none;
 
@@ -10,16 +11,20 @@
 
 /* Main Bar - Transparent background */
 window#waybar {
-    background: rgba(0, 0, 0, 0.8);
+    background: transparent;
     color: #ffffff;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.12);
 }
 
 /* Left Section - Launcher + Window + Workspaces */
 #custom-launcher {
-    font-size: 35px;
+    background: rgba(18, 22, 26, 0.7);
+    color: #ffffff;
+    font-size: 14px;
     padding: 0 14px;
-    color: #1e96d2;
+    margin: 0;
+    transition: background 0.2s ease;
+    border: 2px solid rgb(102, 107, 110);
+    border-radius: 4px;
 }
 
 #custom-launcher:hover {
@@ -28,31 +33,62 @@ window#waybar {
 
 /* Window module for app icons */
 #window {
+    background: rgba(18, 22, 26, 0.7);
+    font-size: 16px;
     margin: 0 0 0 20px;
     padding: 0 14px;
-    font-size: 18px;
     transition: background 0.2s ease;
+    color: #ffffff;
+    border: 2px solid rgb(102, 107, 110);
+    border-right: none;
+    border-radius: 4px 0 0 4px;
 }
 
 #window:hover {
     background: rgba(50, 50, 50, 0.9);
 }
 
+/* Color specific apps when active */
+#window.code-oss,
+#window.Code {
+    color: #007ACC;
+}
+
+#window.firefox,
+#window.Firefox {
+    color: #FF7139;
+}
+
+#window.kitty,
+#window.Kitty {
+    color: #50fa7b;
+}
+
+#window.brave-browser,
+#window.Brave-browser {
+    color: #FB542B;
+}
+
 #workspaces {
-    background: transparent;
+    background: rgba(18, 22, 26, 0.7);
     margin: 0;
     padding: 0;
     padding-right: 4px;
+    border: 2px solid rgb(102, 107, 110);
+    border-left: none;
+    border-radius: 0 4px 4px 0;
 }
 
 #workspaces button {
-    padding: 0 3px;
-    margin: 7px 6px 7px 0;
-    font-size: 12px;
+    padding: 0 4px;
+    margin: 4px;
+    border-radius: 4px;
+    color: rgba(255, 255, 255, 0.7);
     background: transparent;
     transition: all 0.2s ease;
     min-width: 20px;
     min-height: 20px;
+    font-size: 11px;
 }
 
 #workspaces button:hover {
@@ -74,15 +110,16 @@ window#waybar {
 
 /* Center Section - Music (MPRIS) */
 #mpris {
-    background: transparent;
+    background: rgba(18, 22, 26, 0.7);
 
     margin: 0;
     padding: 0 12px;
+    border: 2px solid rgb(102, 107, 110);
 
     color: #ffffff;
     font-weight: 400;
-    font-size: 14px;
     transition: background 0.2s ease;
+    border-radius: 4px;
 }
 
 #mpris:hover {
@@ -96,14 +133,17 @@ window#waybar {
 
 /* Right-Section - Combined Block */
 #clock {
-    background: transparent;
+    background: rgba(18, 22, 26, 0.7);
 
     margin: 0;
     padding: 0 4px 0 10px;
+    border: 2px solid rgb(102, 107, 110);
+    border-radius: 4px 0 0 4px;
+    border-right: none;
     color: #ffffff;
     transition: background 0.2s ease;
-    font-weight: 600;
-    font-size: 16px;
+    font-weight: 500;
+    font-size: 13px;
 }
 
 #battery,
@@ -112,21 +152,28 @@ window#waybar {
 #pulseaudio,
 #backlight,
 #tray {
-    background: transparent;
+    background: rgba(18, 22, 26, 0.7);
 
     margin: 0;
     padding: 0 4px;
+    border: 2px solid rgb(102, 107, 110);
+    border-right: none;
+    border-left: none;
     color: #ffffff;
     transition: background 0.2s ease;
 }
 
 #custom-user {
-    background: transparent;
+    background: rgba(18, 22, 26, 0.7);
 
     margin: 0;
-    padding: 0 6px 0 30px;
+    padding: 0 10px 0 30px;
+    border: 2px solid rgb(102, 107, 110);
+    border-radius: 0 4px 4px 0;
+
+    border-left: none;
     color: #ffffff;
-    transition: background 0.4s ease;
+    transition: background 0.2s ease;
     font-weight: 500;
     background-image: url("file:///home/sp/.config/waybar/assets/avatar.png");
     background-repeat: no-repeat;
@@ -138,19 +185,15 @@ window#waybar {
 #idle_inhibitor.activated {
     color: #90EE90;
     font-weight: 600;
-    font-size: 28px;
-    padding: 0px;
 }
 
 #idle_inhibitor.deactivated {
     color: rgba(255, 255, 255, 0.6);
-    font-size: 28px;
-    padding: 0px;
 }
 
 #battery {
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.8);
+    font-size: 13px;
+    color: #90EE90;
 }
 
 #battery.warning:not(.charging) {
@@ -166,8 +209,8 @@ window#waybar {
 }
 
 #network {
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.8);
+    font-size: 13px;
+    color: #87CEEB;
 }
 
 #network.disconnected {
@@ -175,13 +218,12 @@ window#waybar {
 }
 
 #pulseaudio {
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.8);
+    font-size: 13px;
+    color: #DDA0DD;
 }
 
 #backlight {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 14px;
+    color: #ffe066;
 }
 
 #pulseaudio.muted {
@@ -190,7 +232,6 @@ window#waybar {
 
 #tray {
     padding: 4px 6px;
-    font-size: 14px;
 }
 
 /* Hover effects for the combined block */
@@ -202,13 +243,6 @@ window#waybar {
 #backlight:hover,
 #tray:hover {
     background: rgba(50, 50, 50, 0.9);
-}
-
-#battery:hover,
-#network:hover,
-#pulseaudio:hover,
-#backlight:hover {
-    color: #ffffff;
 }
 
 /* Hover effect for the user module */
@@ -223,12 +257,12 @@ window#waybar {
 
 /* Tooltips */
 tooltip {
-    font-family: "FantasqueSansM Nerd Font Mono", "Noto Sans", sans-serif;
-    font-size: 16px;
-    padding: 16px;
+    font-family: "JetBrains Mono Nerd Font", "Noto Sans", sans-serif;
+    font-size: 12px;
+    padding: 6px 10px;
 
-    background: rgba(0, 0, 0, 0.8);
-    border: 2px solid rgb(111, 110, 110);
+    background: rgba(20, 20, 20, 0.95);
+    border: 2px solid rgb(102, 107, 110);
 
     color: #ffffff;
 }

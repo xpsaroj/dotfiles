@@ -5,10 +5,10 @@
 
 font_size 12
 
-background_opacity 0.6
+background_opacity 0.2
 
 # Padding in pixels
-window_padding_width  5  
+# window_padding_width  5  
 
 # BEGIN_KITTY_FONTS
 font_family      family="JetBrainsMonoNL Nerd Font"
@@ -19,6 +19,6 @@ bold_italic_font auto
 
 
 # BEGIN_KITTY_THEME
-# Atelier Sulphurpool Dark
+# 3024 Night
 include current-theme.conf
 # END_KITTY_THEME
