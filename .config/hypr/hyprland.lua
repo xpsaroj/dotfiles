@@ -65,7 +65,7 @@ hl.on("hyprland.start", function()
 
     hl.exec_cmd("hyprpaper & eww daemon")
 
-    hl.exec_cmd("sleep 1 && ~/.config/hypr/scripts/random_wallpaper.sh")
+    hl.exec_cmd("~/.config/hypr/scripts/random_wallpaper.sh")
 
     hl.exec_cmd("wlsunset -t 4000 -T 6500 -l 27.7 -L 85.3")
 
