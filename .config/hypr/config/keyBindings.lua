@@ -130,6 +130,7 @@ hl.bind("CONTROL + " .. mainMod .. " + SPACE", hl.dsp.exec_cmd(commandMenu))
 hl.bind(superShift .. " + SPACE", hl.dsp.exec_cmd(windowMenu))
 hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("swaync-client -t"))
 
+
 -- Utilities
 -- Screenshot
 hl.bind("PRINT", hl.dsp.exec_cmd("hyprshot -m window"))
@@ -139,14 +140,14 @@ hl.bind("SHIFT + PRINT", hl.dsp.exec_cmd("hyprshot -m region"))
 hl.bind(superShift .. " + L", hl.dsp.exec_cmd("hyprlock"))
 
 -- Toggle fullscreen
-hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ action = "toggle" }))                    -- Toggle fullscreen (with borders)
-hl.bind(superShift .. " + F", hl.dsp.window.fullscreen({ action = "toggle", border = false })) -- Toggle fullscreen (without borders)
+hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))   -- Toggle fullscreen (maximize)
+hl.bind(superShift .. " + F", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" })) -- Toggle fullscreen (fullscreen)
 
 -- Toggle waybar
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("pkill waybar || waybar"))
 
 -- Window switcher
-hl.bind("ALT + Tab", hl.dsp.window.cycle_next({ on_focus_under_fullscreen = true })) -- Allow focus change under fullscreen windows, WARNING: DO NOT EDIT THIS
+hl.bind("ALT + Tab", hl.dsp.window.cycle_next()) -- For allowing focus to change under fullscreen windows set on_focus_under_fullscreen = 1 in misc settings in general.lua
 
 -- Workspace switcher
 hl.bind(mainMod .. " + Tab", hl.dsp.focus({ workspace = "e+1" }))

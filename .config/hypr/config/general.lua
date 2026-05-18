@@ -34,12 +34,14 @@ hl.config({
             },
         },
 
-        -- Set to true enable resizing windows by clicking and dragging on borders and gaps
+        -- Set to true enable resizing windows by clicking and dragging on borders and gaps (why isn't this working....)
         resize_on_border = true,
+
+        hover_icon_on_border = true, -- Show resize cursor when hovering over borders and gaps
 
         allow_tearing = false,
 
-        layout = "dwindle"
+        layout = "dwindle",
     },
 
     decoration = {
@@ -176,5 +178,9 @@ hl.config({
     misc = {
         force_default_wallpaper = 0,  -- Set to 0 or 1 to disable the anime mascot wallpapers
         disable_hyprland_logo = true, -- If true disables the random hyprland logo/anime girl background
+        disable_splash_rendering = true,
+
+        on_focus_under_fullscreen = 1, -- Allow focus change under fullscreen windows, set to 0 to disable (WARNING: DO NOT EDIT THIS)
+        exit_window_retains_fullscreen = true, -- If true, when a fullscreen window is closed, the next focused window will be fullscreen as well
     }
 })
